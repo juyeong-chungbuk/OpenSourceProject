@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class quiz1{
+	public static void main(String[] args) {
+		Scanner scanner=new Scanner(System.in);
+		
+		System.out.print("첫번째 원의 중심과 반지름 입력>>");
+		int cicle_x1=scanner.nextInt();
+		int cicle_y1=scanner.nextInt();
+		int cicle_redius1=scanner.nextInt();
+		
+		System.out.print("두번째 원의 중심과 반지름 입력>>");
+		int cicle_x2=scanner.nextInt();
+		int cicle_y2=scanner.nextInt();
+		int cicle_redius2=scanner.nextInt();
+		
+		int x=cicle_x1-cicle_x2;
+		int y=cicle_y1-cicle_y2;
+		int distance=((x*x)+(y*y));
+		
+		if(distance<=((cicle_redius1+cicle_redius2)*(cicle_redius1+cicle_redius2)))
+			System.out.println("두 원은 서로 겹친다.");
+		else
+			System.out.println("두 원은 서로 겹치지 않는다.");
+		
+		scanner.close();
+		
+	}
+}
